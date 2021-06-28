@@ -40,7 +40,7 @@ for (let dayOfMonth=1; dayOfMonth<=31; dayOfMonth++){
             //console.log(data);
         
         
-            for (let i=1; i<data.length; i++ ) {
+            for (let i=0; i<data.length; i++ ) {
 
                 if (data[i].cc == 'USD'){
 
