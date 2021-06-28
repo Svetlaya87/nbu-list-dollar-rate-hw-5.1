@@ -3,7 +3,9 @@
     let Month=5;
     let NBUlistUSDrate=[];
     let acc=0;
-    
+
+    //let CurrDate=new Date(2021,Month, dayOfMonth);
+
     
 
 
@@ -13,7 +15,7 @@ for (let dayOfMonth=1; dayOfMonth<=31; dayOfMonth++){
     
    
 
-    const URL = `https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=2021${Month}+${dayOfMonth}&json`;
+    const URL = `https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=2021${ Month > 9 ? Month : '0'+Month }${dayOfMonth > 9 ? dayOfMonth : '0'+dayOfMonth}&json`;
 
     let xhr = new XMLHttpRequest();
 
