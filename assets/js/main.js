@@ -88,20 +88,20 @@ for (let dayOfMonth=1; dayOfMonth<=31; dayOfMonth++){
             
               
                 
-                    console.log(` ${NBUlistUSDrate[i].day.split('-').reverse().join('.')} - ${NBUlistUSDrate[i].rate} грн`);
+                    console.log(` ${NBUlistUSDrate[i].day.split('-').reverse().join('.')} - ${NBUlistUSDrate[i].rate.toFixed(4)} грн.`);
             
                     tr=resBigTable.insertRow();
                     td = tr.insertCell();
-                    td.innerText=`${NBUlistUSDrate[i].day}`;
+                    td.innerText=`${NBUlistUSDrate[i].day.split('-').reverse().join('.')}`;
             
                     td = tr.insertCell();
                     td.innerText=` - `;
             
                     td = tr.insertCell();
-                    td.innerText=`${NBUlistUSDrate[i].rate} грн`;
+                    td.innerText=`${NBUlistUSDrate[i].rate.toFixed(4)} грн.`;
 
-                    console.log(i);
-                    console.log(dayOfMonth);
+                    //console.log(i);
+                    //console.log(dayOfMonth);
                 
 
 
@@ -110,7 +110,7 @@ for (let dayOfMonth=1; dayOfMonth<=31; dayOfMonth++){
             
             }
             
-            console.log(NBUlistUSDrate);
+            //console.log(NBUlistUSDrate);
             
     
             
@@ -124,6 +124,8 @@ for (let dayOfMonth=1; dayOfMonth<=31; dayOfMonth++){
 
         xhr.send();
 }  
+
+    console.log(NBUlistUSDrate);
 
 
     
